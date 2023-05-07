@@ -38,7 +38,7 @@ class App extends Component {
     var data = {
       id: event._id
     }
-    fetch('/delete', {
+    fetch('https://ngomgmt.onrender.com/delete', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
@@ -97,7 +97,7 @@ class App extends Component {
       id: this.state.id
     }
 
-    fetch('/edit', {
+    fetch('https://ngomgmt.onrender.com/edit', {
       method: "PUT",
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
@@ -129,7 +129,7 @@ class App extends Component {
       date: this.state.date
     }
     console.log(data);
-    fetch('/add', {
+    fetch('https://ngomgmt.onrender.com/add', {
       method: "POST",
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
