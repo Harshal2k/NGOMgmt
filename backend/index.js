@@ -87,6 +87,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 // Connect to MongoDB
 mongoose.connect(`mongodb+srv://harshalgosawi:mongodbHarshal2k@bookslist.co15j1q.mongodb.net/`, {
@@ -110,6 +111,7 @@ const Event = mongoose.model('Event', eventSchema);
 // Create Express application
 const app = express();
 
+app.use(cors()); // Enable CORS
 app.use(bodyParser.json());
 
 // Set up port
