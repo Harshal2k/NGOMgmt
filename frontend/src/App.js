@@ -151,7 +151,7 @@ class App extends Component {
   }
 
   fetchData() {
-    fetch("/events", { method: 'GET' }).then((res) => {
+    fetch("https://ngomgmt.onrender.com/events", { method: 'GET' }).then((res) => {
       if (res.status >= 400) {
         console.log(res.status);
       }
@@ -162,7 +162,7 @@ class App extends Component {
       console.log('ERROR!', err);
     });
 
-    fetch("/volunteers", { method: "GET" }).then((res) => {
+    fetch("https://ngomgmt.onrender.com/volunteers", { method: "GET" }).then((res) => {
       if (res.status >= 400) {
         console.log(res.status);
       }
