@@ -6,6 +6,7 @@
   "scripts": {
     "client": "cd client && npm start",
     "start": "nodemon index.js",
+    "build":"npm i",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "author": "",
